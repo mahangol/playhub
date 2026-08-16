@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PLAYHUB | فروشگاه بازی‌های پلی‌استیشن</title>
+<meta name="description" content="جدیدترین بازی‌های PS5 و PS4 را با تجربه‌ای سریع، ساده و حرفه‌ای پیدا و خریداری کنید." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/global.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/animations.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar anim-navbar" role="banner">
+  <div class="container">
+    <a href="index.html" class="navbar-logo">
+      <span class="dot"></span>
+      <span class="en">PLAYHUB</span>
+    </a>
+
+    <nav class="navbar-links" aria-label="پیمایش اصلی">
+      <a href="index.html">خانه</a>
+      <a href="products.html">فروشگاه</a>
+      <a href="products.html">بازی‌ها</a>
+      <a href="products.html#categories">دسته‌بندی‌ها</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <button class="icon-btn desktop-only" data-action="open-search" aria-label="جستجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+      <a href="login.html" class="icon-btn desktop-only" aria-label="ورود به حساب کاربری"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg></a>
+      <button class="icon-btn" data-action="open-cart" aria-label="سبد خرید">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1.3"/><circle cx="18" cy="21" r="1.3"/><path d="M2.5 3h2l2.4 12.1a2 2 0 0 0 2 1.6h8a2 2 0 0 0 2-1.6L21 7H6"/></svg>
+        <span class="badge-count" data-cart-count>0</span>
+      </button>
+      <button class="icon-btn navbar-mobile-search" data-action="open-search" aria-label="جستجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+      <button class="icon-btn navbar-mobile-toggle" aria-label="باز کردن منو" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="mobile-drawer-overlay" id="mobileDrawerBackdrop"></div>
+<aside class="mobile-drawer" id="mobileDrawer" aria-label="منوی موبایل">
+  <div class="mobile-drawer-head">
+    <span class="navbar-logo"><span class="dot"></span><span class="en">PLAYHUB</span></span>
+    <button class="icon-btn" id="mobileDrawerClose" aria-label="بستن منو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <nav class="mobile-drawer-nav" aria-label="پیمایش موبایل">
+    <a href="index.html">خانه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a href="products.html">فروشگاه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a href="products.html">بازی‌ها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a href="products.html#categories">دسته‌بندی‌ها <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></a>
+    <a href="login.html">ورود / ثبت‌نام <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></a>
+  </nav>
+  <div class="mobile-drawer-foot">پشتیبانی ۲۴ ساعته · تمام حقوق محفوظ است</div>
+</aside>
+
+<!-- ============ SEARCH OVERLAY ============ -->
+<div class="overlay-backdrop" id="searchBackdrop"></div>
+<div class="search-overlay" id="searchOverlay">
+  <div class="container">
+    <div class="search-overlay-head">
+      <h3>جستجوی بازی‌ها</h3>
+      <button class="icon-btn" id="searchOverlayClose" aria-label="بستن جستجو"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" id="searchOverlayInput" class="search-input" placeholder="نام بازی را جستجو کنید..." autocomplete="off" />
+    </div>
+    <p class="search-quick-label">نتایج سریع</p>
+    <div class="search-results-list" id="searchOverlayResults">
+      <p style="color:var(--color-muted);font-size:.85rem">نام بازی، دسته‌بندی یا پلتفرم را تایپ کنید…</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="overlay-backdrop" id="cartBackdrop"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="سبد خرید">
+  <div class="cart-drawer-head">
+    <h3>سبد خرید</h3>
+    <button class="icon-btn" id="cartDrawerClose" aria-label="بستن سبد خرید"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="cart-drawer-items" id="cartItems"></div>
+  <div class="cart-drawer-foot">
+    <div class="cart-total-row">
+      <span>جمع کل</span>
+      <span id="cartTotal">۰ تومان</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="cartCheckout">تسویه حساب</button>
+    <button class="btn btn-ghost btn-block" id="cartContinue">ادامه خرید</button>
+  </div>
+</aside>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-art"></div>
+    <div class="hero-blade"></div>
+    <div class="hero-glow-orb"></div>
+    <div class="container">
+      <div class="hero-content anim-hero-content">
+        <span class="hero-eyebrow">بازی‌های پلی‌استیشن</span>
+        <h1 class="hero-title">بازی بعدی خودت را<br />پیدا کن.</h1>
+        <p class="hero-text">جدیدترین بازی‌های PS5 و PS4 را با تجربه‌ای سریع، ساده و حرفه‌ای پیدا و خریداری کنید.</p>
+        <div class="hero-actions">
+          <a href="products.html" class="btn btn-primary">مشاهده بازی‌ها</a>
+          <a href="products.html?sort=newest" class="btn btn-ghost">محصولات جدید</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b class="en">+۲۰۰</b><span>عنوان بازی</span></div>
+          <div class="hero-stat"><b class="en">۲۴/۷</b><span>پشتیبانی آنلاین</span></div>
+          <div class="hero-stat"><b class="en">۱۰۰٪</b><span>پرداخت امن</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED CATEGORIES ============ -->
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">مرور دسته‌بندی‌ها</span>
+          <h2>دسته‌بندی‌های محبوب</h2>
+        </div>
+      </div>
+      <div class="category-grid reveal" id="categoryGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ TRENDING PRODUCTS ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">پرفروش‌ترین‌ها</span>
+          <h2>محبوب‌ترین بازی‌ها</h2>
+        </div>
+        <div class="carousel-nav">
+          <button data-action="carousel-prev" aria-label="قبلی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+          <button data-action="carousel-next" aria-label="بعدی"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="carousel-wrap reveal">
+        <div class="carousel-track" id="trendingTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEW RELEASES ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">تازه از راه رسیده</span>
+          <h2>تازه‌ترین بازی‌ها</h2>
+        </div>
+        <a href="products.html" class="link-more">مشاهده همه <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a>
+      </div>
+      <div class="product-grid grid-responsive reveal" id="newReleasesGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ PROMO ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="promo reveal">
+        <span class="promo-eyebrow en">GAME WEEK</span>
+        <h2>تا ۴۰٪ تخفیف روی منتخبی از بهترین بازی‌های PS5</h2>
+        <p>فرصت محدود؛ پیش از اتمام موجودی، بازی‌های مورد علاقه‌ات را با بهترین قیمت تهیه کن.</p>
+        <a href="products.html?sort=price-asc" class="btn btn-primary">مشاهده تخفیف‌ها</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY CHOOSE US ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="features-grid reveal">
+        <div class="feature-item">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg></span>
+          <h3>خرید سریع</h3>
+          <p>فرآیند خرید ساده و بدون مراحل اضافه، در کمتر از یک دقیقه.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"/></svg></span>
+          <h3>پرداخت امن</h3>
+          <p>تمامی تراکنش‌ها با بالاترین استاندارد امنیتی انجام می‌شود.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13a8 8 0 0116 0"/><rect x="3" y="13" width="4" height="6" rx="1"/><rect x="17" y="13" width="4" height="6" rx="1"/><path d="M20 19a3 3 0 01-3 3h-2"/></svg></span>
+          <h3>پشتیبانی حرفه‌ای</h3>
+          <p>تیم پشتیبانی ما همیشه آماده پاسخگویی به سوالات شماست.</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 12l9 5 9-5M3 17l9 5 9-5"/></svg></span>
+          <h3>تنوع بالای بازی‌ها</h3>
+          <p>مجموعه‌ای بزرگ از عناوین PS5 و PS4 در تمامی ژانرها.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <h2 class="reveal">بازی بعدی تو منتظرته.</h2>
+      <a href="products.html" class="btn btn-primary reveal">مشاهده فروشگاه</a>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="navbar-logo"><span class="dot"></span><span class="en">PLAYHUB</span></span>
+        <p>مرجع خرید بازی‌های دیجیتال پلی‌استیشن با تجربه‌ای سریع، امن و حرفه‌ای.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          <a href="#" aria-label="تلگرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 4L2.5 11.5l6 2 2 6.5 3-4.2L18.5 19 21 4z"/><path d="M8.5 13.5L18 6"/></svg></a>
+          <a href="#" aria-label="توییتر"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.7.3-1.5.6-2.3.7.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 00-7 3.7A11.6 11.6 0 013 4.9a4.1 4.1 0 001.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.7 3.3 4a4.2 4.2 0 01-1.9.1 4.1 4.1 0 003.9 2.9A8.3 8.3 0 012 18.6a11.6 11.6 0 006.3 1.9c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>فروشگاه</h4>
+        <ul>
+          <li><a href="products.html">همه بازی‌ها</a></li>
+          <li><a href="products.html?platform=PS5">بازی‌های PS5</a></li>
+          <li><a href="products.html?platform=PS4">بازی‌های PS4</a></li>
+          <li><a href="index.html#categories">کارت هدیه</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>دسته‌بندی‌ها</h4>
+        <ul>
+          <li><a href="products.html?genre=Action">اکشن</a></li>
+          <li><a href="products.html?genre=RPG">نقش‌آفرینی</a></li>
+          <li><a href="products.html?genre=Sports">ورزشی</a></li>
+          <li><a href="products.html?genre=Racing">مسابقه‌ای</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>راهنما</h4>
+        <ul>
+          <li><a href="#">سوالات متداول</a></li>
+          <li><a href="#">روش خرید</a></li>
+          <li><a href="#">شرایط استفاده</a></li>
+          <li><a href="#">حریم خصوصی</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>ارتباط با ما</h4>
+        <ul>
+          <li><a href="#">پشتیبانی آنلاین</a></li>
+          <li><a href="#">درباره ما</a></li>
+          <li><a href="#" class="en">support@playhub.ir</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© ۱۴۰۴ PLAYHUB — تمام حقوق محفوظ است.</span>
+      <span class="en">Built with vanilla HTML, CSS & JS</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/products.js"></script>
+<script src="js/search.js"></script>
+<script src="js/app.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    renderInto("#categoryGrid", CATEGORIES, categoryCardHTML);
+    const trending = PRODUCTS.filter((p) => p.tag === "popular" || p.rating === 5).slice(0, 10);
+    renderInto("#trendingTrack", trending, productCardHTML);
+    const newest = PRODUCTS.slice().sort((a, b) => (b.tag === "new") - (a.tag === "new") || b.id - a.id).slice(0, 10);
+    renderInto("#newReleasesGrid", newest, productCardHTML);
+  });
+</script>
+</body>
+</html>

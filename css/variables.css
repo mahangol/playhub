@@ -1,0 +1,64 @@
+:root {
+  /* Colors */
+  --color-bg: #07070a;
+  --color-bg-alt: #101116;
+  --color-surface: #15161c;
+  --color-surface-hover: #1b1c23;
+  --color-text: #ffffff;
+  --color-muted: #a5a7b0;
+  --color-muted-dim: #6c6e78;
+  --color-primary: #006fcd;
+  --color-accent: #00a8ff;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+  --color-danger: #ff5c5c;
+  --color-success: #3ddc97;
+  --color-glow: rgba(0, 168, 255, 0.18);
+
+  /* Typography */
+  --font-fa: "Vazirmatn", "Tahoma", sans-serif;
+  --font-en: "Manrope", "Inter", sans-serif;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 0 1px rgba(0, 168, 255, 0.25), 0 12px 40px rgba(0, 111, 205, 0.25);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-fast: 200ms;
+  --t-base: 320ms;
+  --t-slow: 500ms;
+
+  /* Layout */
+  --container: 1320px;
+  --container-narrow: 880px;
+  --navbar-h: 76px;
+  --navbar-h-mobile: 64px;
+
+  /* Breakpoints (for reference / JS use) */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+}
